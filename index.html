@@ -18,7 +18,6 @@
             --dark-lighter: #1e293b;
         }
 
-
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f8fafc;
@@ -26,14 +25,326 @@
             scroll-behavior: smooth;
         }
 
-
         .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.5)), url('微信图片_20260509171413_1389_409.jpg');
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.5)), url('images/独立站首页大图.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-
         .glass-nav {
             background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(14, 165, 233, 0.1);
+            color: var(--primary);
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 accent-gradient rounded-lg flex items-center justify-center text-white font-bold text-xl">S</div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tighter text-slate-900 leading-none">SANYUAN ZHONGBO</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mt-1">Optical Components</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="#home" class="text-sm font-bold text-slate-600 hover:text-sky-500 transition">Home</a>
+                <a href="#about" class="text-sm font-bold text-slate-600 hover:text-sky-500 transition">Our Expertise</a>
+                <a href="#products" class="text-sm font-bold text-slate-600 hover:text-sky-500 transition">Solutions</a>
+                <a href="#quality" class="text-sm font-bold text-slate-600 hover:text-sky-500 transition">Precision</a>
+                <a href="#contact" class="px-6 py-2.5 rounded-full accent-gradient text-white text-sm font-extrabold hover:shadow-lg hover:shadow-sky-500/30 transition-all transform hover:scale-105 active:scale-95">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="lg:hidden text-slate-900"><i class="fa-solid fa-bars text-2xl"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative px-6">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold mb-8 uppercase tracking-widest">
+                <span class="flex h-2 w-2 rounded-full bg-sky-400 mr-3 animate-pulse"></span> ISO 9001:2015 Certified Manufacturer
+            </div>
+            <h1 class="text-5xl md:text-8xl font-extrabold text-white mb-8 tracking-tighter leading-[1.1]">
+                Mastery of <span class="text-gradient">Light</span>.<br>Precision in <span class="text-sky-400">Glass</span>.
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+                Empowering sighting systems, scientific observation, and high-power lasers with sub-micron precision optical components.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#contact" class="px-10 py-5 rounded-2xl accent-gradient text-white font-extrabold text-lg shadow-2xl shadow-sky-500/50 hover:shadow-sky-500/70 transition transform hover:-translate-y-1">Start OEM Project</a>
+                <a href="#products" class="px-10 py-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-extrabold text-lg hover:bg-white/20 transition">Technical Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stat Grid -->
+    <div class="max-w-7xl mx-auto px-6 relative -mt-20 z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 text-center" data-aos="zoom-in" data-aos-delay="100">
+                <div class="text-4xl font-extrabold text-sky-600 mb-1">λ/10</div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Surface Accuracy</div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 text-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="text-4xl font-extrabold text-sky-600 mb-1">20/10</div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Scratch-Dig</div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 text-center" data-aos="zoom-in" data-aos-delay="300">
+                <div class="text-4xl font-extrabold text-sky-600 mb-1">1000+</div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">OEM Partnerships</div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 text-center" data-aos="zoom-in" data-aos-delay="400">
+                <div class="text-4xl font-extrabold text-sky-600 mb-1">Sub-µm</div>
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Manufacturing Tol.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <span class="section-tag">Decades of Heritage</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 tracking-tight">Sanyuan Zhongbo:<br>The Benchmark of Optics.</h2>
+                <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                    Headquartered in China, we combine decades of optical heritage with cutting-edge manufacturing technology. We are dedicated to providing global industrial, medical, and scientific sectors with high-precision optical components that redefine clarity and performance.
+                </p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mt-1 flex-shrink-0"><i class="fa-solid fa-check text-xs"></i></div>
+                        <p class="text-slate-700 font-semibold italic">Advanced Material Processing: K9, BK7, Fused Silica, Sapphire.</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mt-1 flex-shrink-0"><i class="fa-solid fa-check text-xs"></i></div>
+                        <p class="text-slate-700 font-semibold italic">In-house High-Vacuum Coating Chambers.</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mt-1 flex-shrink-0"><i class="fa-solid fa-check text-xs"></i></div>
+                        <p class="text-slate-700 font-semibold italic">Engineering Support from Concept to Prototyping.</p>
+                    </div>
+                </div>
+                <a href="#contact" class="inline-flex items-center font-extrabold text-sky-600 group">
+                    View Technical Capabilities <i class="fa-solid fa-arrow-right ml-3 transition-transform group-hover:translate-x-2"></i>
+                </a>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="absolute -inset-4 bg-sky-500/10 rounded-[3rem] blur-3xl"></div>
+                <img src="images/工厂图片.png" alt="Factory Environment" class="relative rounded-[2rem] shadow-2xl z-10 w-full object-cover aspect-[4/3]">
+                <div class="absolute -bottom-8 -left-8 bg-white p-8 rounded-3xl shadow-2xl z-20 border border-slate-100 hidden md:block">
+                    <div class="text-5xl font-black text-sky-600 mb-1">15+</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest leading-tight">Years of<br>Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="products" class="py-32 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-20">
+            <span class="section-tag">Specialized Solutions</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Precision in Every Spectrum.</h2>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-3 gap-12">
+            <!-- Product 1 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative overflow-hidden rounded-[2.5rem] bg-white aspect-square mb-8 shadow-sm group-hover:shadow-2xl transition-all duration-500">
+                    <img src="images/A008ea4238ab64a34a0e0fbdfce58efb10.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-10">
+                        <span class="text-white font-bold">Custom Designs Available</span>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-3 tracking-tight">Sighting Optics</h3>
+                <p class="text-slate-500 mb-6 leading-relaxed">Mil-Spec lenses for tactical scopes and high-end sighting systems with broadband AR coating.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-wider">Tactical</span>
+                    <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-wider">Mil-Spec</span>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative overflow-hidden rounded-[2.5rem] bg-white aspect-square mb-8 shadow-sm group-hover:shadow-2xl transition-all duration-500">
+                    <img src="images/A2f69b421d9f642fe863b43f344bb101fJ.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-10">
+                        <span class="text-white font-bold">Scientific Grade</span>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-3 tracking-tight">Precision Eyepieces</h3>
+                <p class="text-slate-500 mb-6 leading-relaxed">Multi-element wide-field designs for scientific microscopy and professional observation.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-wider">Wide-Field</span>
+                    <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-wider">Microscopy</span>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative overflow-hidden rounded-[2.5rem] bg-white aspect-square mb-8 shadow-sm group-hover:shadow-2xl transition-all duration-500">
+                    <img src="images/Ac2957f36fb374bb2977f4bb71c71db2eS.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-10">
+                        <span class="text-white font-bold">High Damage Threshold</span>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-3 tracking-tight">Laser Components</h3>
+                <p class="text-slate-500 mb-6 leading-relaxed">High-power handling optics for industrial fiber cutting and medical laser systems.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-wider">Industrial</span>
+                    <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-wider">Fiber Laser</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specs Grid -->
+    <section id="quality" class="py-32 bg-slate-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-24 items-center">
+            <div data-aos="fade-right">
+                <span class="section-tag bg-white/10 text-sky-400">Production Standards</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-10 tracking-tight">Engineering Limits,<br>Pushed Further.</h2>
+                <div class="space-y-8">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <span class="text-slate-400 font-bold uppercase tracking-widest text-xs">Material Excellence</span>
+                        <span class="font-extrabold">Sapphire, Quartz, K9, ZnSe</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <span class="text-slate-400 font-bold uppercase tracking-widest text-xs">Max Surface Accuracy</span>
+                        <span class="font-extrabold">λ/10 @ 633nm</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <span class="text-slate-400 font-bold uppercase tracking-widest text-xs">Scratch-Dig (ISO)</span>
+                        <span class="font-extrabold">10/5 - 20/10</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                        <span class="text-slate-400 font-bold uppercase tracking-widest text-xs">Centering Station</span>
+                        <span class="font-extrabold">< 30 Arc Seconds</span>
+                    </div>
+                </div>
+                <div class="mt-12 p-8 bg-white/5 border border-white/10 rounded-3xl flex items-center space-x-6">
+                    <i class="fa-solid fa-microchip text-4xl text-sky-400"></i>
+                    <p class="text-slate-300 font-medium">In-house Class 1000 Cleanroom for ultra-precision assembly and contamination-free coating.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                <img src="images/a11a7765ae342724de4a48d8bd21fb09.jpg" class="rounded-3xl w-full aspect-square object-cover shadow-2xl">
+                <img src="images/29fda3ac58b76a86ceaf47f03afd659b.jpg" class="rounded-3xl w-full aspect-square object-cover shadow-2xl mt-12">
+                <img src="images/84862de44b50899e7fd283c0f3d6787f.jpg" class="rounded-3xl w-full aspect-square object-cover shadow-2xl -mt-12">
+                <img src="images/b57f5da874798689f36c52b28172f889.jpg" class="rounded-3xl w-full aspect-square object-cover shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- RFQ Form -->
+    <section id="contact" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="bg-slate-900 rounded-[4rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+                <div class="lg:w-1/2 p-12 md:p-20 text-white flex flex-col justify-between">
+                    <div>
+                        <span class="section-tag bg-white/10 text-sky-400">Contact Us</span>
+                        <h2 class="text-4xl md:text-5xl font-extrabold mb-8 tracking-tight leading-tight">Bring Precision to Your Next Project.</h2>
+                        <p class="text-slate-400 mb-12 text-lg">Send us your technical drawings (STEP/DWG) for a detailed manufacturing feasibility analysis and quote.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-sky-400"><i class="fa-solid fa-envelope"></i></div>
+                                <span class="font-bold text-lg">syzboptics@163.com</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-sky-400"><i class="fa-solid fa-phone"></i></div>
+                                <span class="font-bold text-lg">+86 18191014906</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-sky-400"><i class="fa-solid fa-location-dot"></i></div>
+                                <span class="font-bold text-lg text-slate-300 italic text-sm">陕西省咸阳市三原县张兴镇<br>(Zhangxing Town, Sanyuan County, Xianyang City, Shaanxi)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 bg-white p-12 md:p-20 border-l border-slate-800">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="Full Name" class="w-full bg-slate-50 border-2 border-transparent focus:border-sky-500 rounded-2xl px-6 py-4 outline-none transition font-bold">
+                            <input type="email" placeholder="Business Email" class="w-full bg-slate-50 border-2 border-transparent focus:border-sky-500 rounded-2xl px-6 py-4 outline-none transition font-bold">
+                        </div>
+                        <input type="text" placeholder="Company Name" class="w-full bg-slate-50 border-2 border-transparent focus:border-sky-500 rounded-2xl px-6 py-4 outline-none transition font-bold">
+                        <textarea placeholder="Tell us about your lens requirements (Material, Dimensions, Coating, Quantity...)" rows="5" class="w-full bg-slate-50 border-2 border-transparent focus:border-sky-500 rounded-2xl px-6 py-4 outline-none transition font-bold"></textarea>
+                        <button class="w-full py-5 rounded-2xl accent-gradient text-white font-extrabold text-lg shadow-xl hover:shadow-sky-500/40 transition transform hover:-translate-y-1">Submit Request for Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center text-slate-400">
+            <div class="flex items-center space-x-2 mb-8 md:mb-0">
+                <div class="w-8 h-8 accent-gradient rounded flex items-center justify-center text-white font-bold text-sm">S</div>
+                <span class="text-sm font-black text-slate-900 tracking-tighter uppercase">Sanyuan Zhongbo Optical</span>
+            </div>
+            <p class="text-xs font-bold">© 2026 Sanyuan Zhongbo Optical Components Co., Ltd. Global Partnership Dept.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800
+        });
+ 
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-xl');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-xl');
+            }
+        });
+    </script>
+</body>
+            </html>
